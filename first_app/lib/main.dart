@@ -43,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       questionIndex = questionIndex + 1;
     });
-
     print('Button ' + questionIndex.toString() + ' Pressed!');
   }
 
@@ -66,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             Text(questions.elementAt(questionIndex)),
-            RaisedButton(child: Text('Button 1'), onPressed: buttonPressed),
+            RaisedButton(
+                child: Text('Increase Question'), onPressed: buttonPressed),
             RaisedButton(
                 child: Text('Button 2'), onPressed: () => print('Button 2'))
           ],
